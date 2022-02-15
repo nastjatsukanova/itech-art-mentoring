@@ -1,3 +1,796 @@
 body {
     margin: 0;
 }
+
+.header {
+    height: 102px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Raleway;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.logo_img {
+    width: 129px;
+    height: 64.5px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: Raleway;
+    font-weight: 800;
+    text-align: center;
+    width: 40%;
+}
+
+.menu {
+    font-size: 17px;
+    font-style: normal;
+    cursor: pointer;
+    letter-spacing: 1.275px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.menu_item {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 0.6em;
+}
+
+.menu_item::after {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 0;
+    background-color: #4BA87D;
+    transition: all .3s ease-in-out;
+    left: 100%;
+    bottom: 0;
+}
+
+.menu_item:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.sign {
+    border: 4px solid #4BA87D;
+    background-color: #4BA87D;
+    color: white;
+    padding: 10px 20px 11px 20px;
+    cursor: pointer;
+    margin-left: 3%;
+    width: 27%;
+}
+
+.sign:hover {
+    background-color: #3b8563;
+    border: 4px solid #3b8563;
+}
+
+.title {
+    font-family: Playfair Display;
+    font-weight: 900;
+    font-size: 59px;
+}
+
+.sub {
+    font-family: Raleway;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 19px;
+}
+
+.buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    font-family: Raleway;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 21px;
+    width: 45%;
+    padding-top: 19px;
+    padding-bottom: 21px;
+}
+
+.try,
+.email_btn {
+    border: 4px solid #4BA87D;
+    background-color: #4BA87D;
+    color: white;
+}
+
+.try:hover {
+    background-color: #3b8563;
+    border: 4px solid #3b8563;
+}
+
+.demo:hover {
+    background-color: #e5e5e5;
+    border: 4px solid #3b8563;
+}
+
+.demo,
+.video_btn,
+.get_started_btn {
+    border: 4px solid #4BA87D;
+    background-color: white;
+    color: #4BA87D;
+}
+
+.video_btn {
+    border: none;
+}
+
+.video_btn:hover {
+    border: 4px solid #4BA87D;
+    transition: .1s ease-in-out;
+}
+
+.content_img {
+    position: absolute;
+    left: 40%;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+}
+
+.content_block {
+    width: 100%;
+    height: 650px;
+    background-image: url(./pictures/content_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding-top: 66px;
+    align-items: center;
+}
+
+.head {
+    z-index: 2;
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1%;
+    margin-left: 15%;
+}
+
+.video_section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+
+.video_img {
+    z-index: 1;
+    max-width: 100%;
+    margin-top: 5%;
+}
+
+.video_text {
+    z-index: 2;
+    position: absolute;
+    font-family: Playfair Display;
+    font-weight: 900;
+    font-size: 60px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.video_btn {
+    z-index: 2;
+    font-family: Raleway;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 21px;
+    width: 200px;
+    padding-top: 19px;
+    padding-bottom: 21px;
+    position: absolute;
+    margin-top: 20%;
+    text-transform: uppercase;
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.description_bg {
+    width: 100%;
+    top: -243px;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.description1 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    width: 320px;
+    height: fit-content;
+    font-family: Raleway;
+    font-size: 16px;
+    margin-top: 50px;
+}
+
+.description_text {
+    margin: 0px;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 39px;
+    padding-top: 24px;
+    padding-bottom: 17px;
+    background-color: white;
+    white-space: pre-line;
+}
+
+.description_link {
+    margin: 0px;
+    color: #4BA87D;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.description_img {
+    max-width: 100%;
+}
+
+.description2 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    width: 320px;
+    height: fit-content;
+    font-family: Raleway;
+    font-size: 16px;
+    margin-top: 130px;
+}
+
+.description3 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    width: 360px;
+    margin-top: 170px;
+}
+
+.description_title {
+    font-size: 44px;
+    font-family: Playfair Display;
+    font-weight: 900;
+    margin: 0px;
+}
+
+.description_subtitle {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.persons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    font-family: Raleway;
+    font-style: normal;
+    color: white;
+}
+
+.person {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.person_name {
+    position: absolute;
+    padding-left: 5%;
+}
+
+.person_title {
+    font-weight: 900;
+    font-size: 34px;
+}
+
+.person_subtitle {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.person_img {
+    max-width: 100%;
+}
+
+.email {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email_enter {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 65px;
+    justify-content: center;
+}
+
+.email_title {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    width: 60%;
+    text-align: center;
+}
+
+.email_input {
+    width: 380px;
+    margin-right: 27px;
+    font-weight: 500;
+    font-family: Raleway;
+    font-size: 21px;
+    border-radius: 5px;
+    border: 1px solid #9F9F9F;
+}
+
+.email_label {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    color: #4BA87D;
+    width: 40%;
+}
+
+.email_btn {
+    font-family: Raleway;
+    font-size: 21px;
+    font-weight: 900;
+    padding-left: 29px;
+    padding-right: 30px;
+}
+
+.email_btn:hover {
+    background-color: #3b8563;
+    border: 4px solid #3b8563;
+    cursor: pointer;
+}
+
+.brands {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brands_title,
+.get_started_title {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    width: 30%;
+    text-align: center;
+}
+
+.brands_images {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.brands_img {
+    max-width: 100%;
+}
+
+.get_started {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    background-color: #4BA87D;
+    color: white;
+}
+
+.get_started_title {
+    font-size: 60px;
+    width: 60%;
+}
+
+.get_started_btn {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    text-transform: uppercase;
+    padding-left: 33px;
+    padding-top: 19px;
+    padding-bottom: 21px;
+    padding-right: 30px;
+    margin-bottom: 5%;
+}
+
+.get_started_btn:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.footer_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+    font-family: Raleway;
+    font-style: normal;
+    font-size: 19px;
+}
+
+.footer_col {
+    display: flex;
+    justify-content: space-between;
+    width: 46%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    line-height: 27px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+    align-items: flex-start;
+    margin-bottom: 2%;
+}
+
+.footer_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer_logo_text {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+}
+
+.footer_list {
+    font-weight: bold;
+}
+
+hr {
+    width: 80%;
+    border: none;
+    border-top: 2px solid #DBDBDB;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@media (max-width:768px) {
+    .header {
+        height: 66px;
+        justify-content: space-around;
+    }
+    .logo_img {
+        width: 84px;
+        height: 42px;
+        margin-right: -15px;
+    }
+    .logo {
+        width: 30%;
+    }
+    .logo_title {
+        font-size: 22px;
+    }
+    .nav {
+        width: 60%;
+    }
+    .menu_item {
+        font-size: 11px;
+    }
+    .sign {
+        font-size: 13px;
+        padding: 6px 13.5px 6px 13.5px;
+    }
+    .content_block {
+        width: 100%;
+        height: 415px;
+    }
+    .head {
+        max-width: 40%;
+        margin-left: 5%;
+    }
+    .button,
+    .video_btn {
+        font-size: 13px;
+        padding-top: 13px;
+        padding-bottom: 14px;
+        letter-spacing: 0.65px;
+    }
+    .title {
+        font-size: 38px;
+    }
+    .sub {
+        font-size: 12px;
+    }
+    .content_img {
+        left: 28%;
+        max-width: 69%;
+    }
+    .video_img {
+        max-width: 80%;
+    }
+    .video_text {
+        font-size: 38px;
+    }
+    .description_bg {
+        top: -130px;
+    }
+    .description_img,
+    .description1 {
+        width: 209px;
+        margin-top: 10px;
+    }
+    .description_img,
+    .description2 {
+        width: 209px;
+        margin-top: 19px;
+    }
+    .description_text {
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 25px;
+        padding-top: 17px;
+    }
+    .description_subtitle,
+    .description_link {
+        font-size: 12px;
+    }
+    .description_title {
+        font-size: 28px;
+    }
+    .description3 {
+        width: 232px;
+        margin-top: 95px;
+    }
+    .persons {
+        margin: 8% auto 8% auto;
+        width: 90%;
+    }
+    .person_img {
+        max-width: 90%;
+    }
+    .person_title {
+        font-size: 22px;
+    }
+    .person_subtitle {
+        font-size: 12px;
+    }
+    .email_title {
+        font-size: 22px;
+    }
+    .email_input {
+        width: 269px;
+        font-size: 18px;
+    }
+    .email_btn {
+        font-size: 15px;
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+    .email_label {
+        font-size: 17px;
+        width: 59%;
+    }
+    .brands_title {
+        font-size: 26px;
+    }
+    .brands_img {
+        width: 13%;
+    }
+    .get_started_title {
+        font-size: 42px;
+    }
+    .get_started_btn {
+        font-size: 15px;
+        padding: 13px 23px 14px 23px;
+    }
+    .footer_logo_text {
+        font-size: 16px;
+    }
+    .footer_list {
+        font-size: 12px;
+        width: 50%;
+    }
+    .info {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 430px) {
+    .menu {
+        display: none;
+    }
+    .header {
+        margin-bottom: 5%;
+    }
+    .head {
+        font-size: 36px;
+        max-width: 92%;
+    }
+    .sign {
+        width: 34%;
+    }
+    .content_img {
+        max-width: 95%;
+        left: 2%;
+        top: 20px;
+    }
+    .title {
+        margin-top: -20%;
+        width: 75%;
+    }
+    .sub {
+        margin-top: 30%;
+        width: 80%;
+    }
+    .buttons {
+        justify-content: space-between;
+        margin-top: 3%;
+    }
+    .content_block {
+        background: none;
+    }
+    .content {
+        padding-top: 15%;
+    }
+    .video_text {
+        font-size: 22px;
+    }
+    .video_btn {
+        font-size: 8px;
+        padding-top: 6.5px;
+        padding-bottom: 7.5px;
+        width: 65px;
+        letter-spacing: 0.3px;
+    }
+    .video_img {
+        max-width: 95%;
+    }
+    .description_bg {
+        width: 100%;
+        top: 90px;
+        height: 110%;
+    }
+    .description {
+        flex-direction: column;
+    }
+    .description1 {
+        align-self: flex-start;
+    }
+    .description2 {
+        align-self: flex-end;
+    }
+    .description3 {
+        align-self: center;
+        margin-top: 20px;
+    }
+    .persons {
+        flex-direction: column;
+        width: 85%;
+        margin: 10% 10%;
+    }
+    .person_img {
+        margin-bottom: 2%;
+    }
+    .email_enter {
+        flex-direction: column;
+        width: 60%;
+        height: 65px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+    .email_input {
+        width: 100%;
+        height: 42px;
+    }
+    .email_btn {
+        padding-top: 13px;
+        padding-bottom: 14px;
+        margin-top: 3%;
+    }
+    .email_label {
+        width: 44%;
+        margin-top: 3%;
+    }
+    .brands_title {
+        width: 60%;
+    }
+    .brands_img {
+        margin-top: 5%;
+        margin-right: 5%;
+        width: auto;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .footer_list {
+        width: 80%;
+        justify-content: space-around;
+        margin-left: 5%;
+    }
+    .footer_col {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .info {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 3%;
+    }
+}
