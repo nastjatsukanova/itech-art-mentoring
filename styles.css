@@ -32,7 +32,7 @@ body {
     font-family: Raleway;
     font-weight: 800;
     text-align: center;
-    width: 55%;
+    width: 100%;
 }
 
 .menu {
@@ -42,8 +42,9 @@ body {
     letter-spacing: 1.275px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     text-transform: uppercase;
+    align-items: center;
 }
 
 .menu_list {
@@ -51,7 +52,8 @@ body {
     display: inline-flex;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .menu_item {
@@ -86,7 +88,7 @@ body {
     color: white;
     padding: 10px 20px 11px 20px;
     cursor: pointer;
-    width: 27%;
+    width: 15%;
 }
 
 .sign:hover {
@@ -552,6 +554,18 @@ hr {
     margin-bottom: 2%;
 }
 
+@media (max-width:1024px) {
+    .content_img {
+        left: 20%;
+    }
+    .sign {
+        width: 18%;
+    }
+    .menu_list {
+        font-size: 12px;
+    }
+}
+
 @media (max-width:768px) {
     .header {
         height: 66px;
@@ -693,10 +707,13 @@ hr {
     }
 }
 
-@media (max-width: 430px) {
-    .menu {
+@media (max-width:630px) {
+    .menu_list {
         display: none;
     }
+}
+
+@media (max-width: 430px) {
     .header {
         margin-bottom: 5%;
     }
