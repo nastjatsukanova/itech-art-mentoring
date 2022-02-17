@@ -27,7 +27,6 @@ body {
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
     font-family: Raleway;
     font-weight: 800;
@@ -42,9 +41,9 @@ body {
     letter-spacing: 1.275px;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
     text-transform: uppercase;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .menu_list {
@@ -88,7 +87,7 @@ body {
     color: white;
     padding: 10px 20px 11px 20px;
     cursor: pointer;
-    width: 15%;
+    width: 170px;
 }
 
 .sign:hover {
@@ -185,7 +184,7 @@ body {
 
 .head {
     z-index: 2;
-    max-width: 35%;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,7 +242,7 @@ body {
 
 .description_bg {
     width: 100%;
-    top: -243px;
+    top: -250px;
     left: 0;
     position: absolute;
     z-index: 0;
@@ -365,9 +364,6 @@ body {
 .email_enter {
     display: flex;
     flex-direction: row;
-    width: 60%;
-    height: 65px;
-    justify-content: center;
 }
 
 .email_title {
@@ -379,6 +375,12 @@ body {
     text-align: center;
 }
 
+.email_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .email_input {
     width: 380px;
     margin-right: 27px;
@@ -387,6 +389,7 @@ body {
     font-size: 21px;
     border-radius: 5px;
     border: 1px solid #9F9F9F;
+    height: 65px;
 }
 
 .email_label {
@@ -395,15 +398,16 @@ body {
     font-weight: 500;
     font-size: 21px;
     color: #4BA87D;
-    width: 40%;
+    text-align: center;
+    padding-left: 3%;
 }
 
 .email_btn {
     font-family: Raleway;
     font-size: 21px;
     font-weight: 900;
-    padding-left: 29px;
-    padding-right: 30px;
+    width: 221px;
+    height: 65px;
 }
 
 .email_btn:hover {
@@ -413,7 +417,7 @@ body {
 }
 
 .brands {
-    margin-top: 5%;
+    margin-top: 10%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -554,15 +558,24 @@ hr {
     margin-bottom: 2%;
 }
 
+@media (min-width:1450px) {
+    .description_bg {
+        top: -430px;
+    }
+}
+
 @media (max-width:1024px) {
     .content_img {
         left: 20%;
     }
     .sign {
-        width: 18%;
+        font-size: 12px;
     }
     .menu_list {
         font-size: 12px;
+    }
+    .head {
+        max-width: 60%;
     }
 }
 
@@ -589,22 +602,23 @@ hr {
         font-size: 11px;
     }
     .sign {
-        font-size: 13px;
+        font-size: 11px;
         padding: 6px 13.5px 6px 13.5px;
+        width: 145px;
     }
     .content_block {
         width: 100%;
         height: 415px;
     }
     .head {
-        max-width: 40%;
+        max-width: 68%;
         margin-left: 5%;
     }
     .button,
     .video_btn {
         font-size: 13px;
         padding-top: 13px;
-        padding-bottom: 14px;
+        padding-bottom: 12px;
         letter-spacing: 0.65px;
     }
     .title {
@@ -680,7 +694,6 @@ hr {
     }
     .email_label {
         font-size: 17px;
-        width: 59%;
     }
     .brands_title {
         font-size: 26px;
@@ -711,6 +724,9 @@ hr {
     .menu_list {
         display: none;
     }
+    .email_enter {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 430px) {
@@ -722,7 +738,8 @@ hr {
         max-width: 92%;
     }
     .sign {
-        width: 34%;
+        width: 83px;
+        font-size: 10px;
     }
     .content_img {
         max-width: 95%;
@@ -734,7 +751,7 @@ hr {
         width: 75%;
     }
     .sub {
-        margin-top: 30%;
+        margin-top: 15%;
         width: 80%;
     }
     .buttons {
@@ -787,7 +804,6 @@ hr {
         margin-bottom: 2%;
     }
     .email_enter {
-        flex-direction: column;
         width: 60%;
         height: 65px;
         justify-content: space-between;
@@ -802,9 +818,9 @@ hr {
         padding-top: 13px;
         padding-bottom: 14px;
         margin-top: 3%;
+        width: 160px;
     }
     .email_label {
-        width: 44%;
         margin-top: 3%;
     }
     .brands_title {
@@ -826,6 +842,9 @@ hr {
     .footer_col {
         flex-direction: column;
         justify-content: flex-start;
+    }
+    .footer_up {
+        flex-direction: column;
     }
     .info {
         flex-direction: column;
