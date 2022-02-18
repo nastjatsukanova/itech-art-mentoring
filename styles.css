@@ -528,8 +528,8 @@ body {
 .footer_list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: space-evenly;
+    width: 46%;
     font-family: Raleway;
     font-size: 19px;
     cursor: pointer;
@@ -538,6 +538,7 @@ body {
 .footer_up {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 4%;
 }
 
 hr {
@@ -642,7 +643,7 @@ hr {
         font-size: 22px;
     }
     .nav {
-        width: 60%;
+        width: 68%;
     }
     .menu_item {
         font-size: 11px;
